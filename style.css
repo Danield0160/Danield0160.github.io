@@ -71,6 +71,7 @@ nav div > a{
     display: flexbox;
     align-content: center;
     position: relative;
+    overflow: hidden;
 }
 #main::before{
     content: "";
@@ -84,14 +85,51 @@ nav div > a{
     margin: -60px;
     top: 0px;
 }
-#main svg{ /* ajustar para otras resoluciones*/
+
+#main .layer{
+    display: flex;
     position: absolute;
+    bottom: 0px;
+    width: 100vw;
+    justify-content: flex-start !;
+}
+#main svg{ /* ajustar para otras resoluciones*/
     z-index: 1;
     opacity: 0.5;
-    scale: 1.2 -1;
+    scale: 4 -4.2;
     bottom: 0px;
     pointer-events: none;
+    /* transition: 0.5s ease-out all; */
+    transform: translateX(-200px) translateY(-50px);
 }
+@media (min-width: 1600px) {
+    #main .layer{
+    transform: translateY(50px);
+    }
+    #main svg {
+        scale: 5 -5.2;
+        transform: translateX(-300px) translateY(-20px);
+    }
+}
+@media (max-width: 1080px) {
+    #main .layer{
+    transform: translateY(30px);
+    }
+    #main svg {
+        scale: 6.2 -7.6;
+        transform: translateX(-150px) ;
+    }
+}
+@media (max-width: 700px) {
+    #main svg {
+        scale: 20.2 -20.6;
+        transform: translateX(-80px) translateY(-120px);
+        opacity: 0.35;
+    }
+}
+
+
+
 #profile{
     margin-bottom: 130px;
     display: flex;
@@ -111,14 +149,27 @@ nav div > a{
     max-width: 60%;
 
 }
-#profile #profile_img img{
-    --factor : 1.1;
-    width: calc(220px * var(--factor));
-    height: calc(300px * var(--factor));
-    object-fit: cover;
-    border: 3px solid white;
-    box-shadow: 1px 1px 5px rgb(228, 228, 228);
+
+.card {
+    width: 290px;
+    height: 400px;
+    border-radius: 20px;
+    padding: 5px;
+    box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+    background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+    margin-bottom: 50px;
 }
+
+.card__content {
+    overflow: hidden;
+    background: rgb(5, 6, 45);
+    border-radius: 17px;
+    width: 100%;
+    height: 100%;
+}
+
+
+
 #profile #profile_img ul{
     padding: 0;
 }
@@ -172,13 +223,27 @@ nav div > a{
 #cursos{
     display: flex;
     justify-content: space-around;
+    background-color: #1f2431;
+    width: 90%;
+    margin-left: auto ;
+    border: 3px solid rgb(125, 125, 211);
+    border-right: 0 ;
+    border-radius: 50px 0 0 50px;
+
+    position: relative;
+    transition: 1s ease-in-out all;
+    left: 100vw;
 }
+#cursos.scrolled{
+    left: 0;
+    transition: 1.5s ease-in-out all;
+}
+
 #cursos > img{
     object-fit: cover;
     width: 22vw;
     min-width: 200px;
     min-height: 200px;
-    height: 20vw;
     border-radius: 20px;
     align-self: center;
 }
@@ -213,19 +278,30 @@ nav div > a{
 #cursos .container div{
     text-align: center;
     width: min-content;
-    min-width: 35%;
+    min-width: 25%;
     border: 1px solid grey;
+    border-radius: 20px;
+    overflow: hidden;
     box-shadow: 2px 2px 3px gray;
-    padding: 5px;
-    padding-top: 10px;
+    background-color: #2c3c53;
+    aspect-ratio: 8 / 9;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    position: relative;
+    min-height: 275px;
 }
 #cursos .container div img{
-    max-width: 60%;
+    max-width: 100%;
     border-radius: 10px;
+    position: absolute;
+    top: 0;
 }
 .gris{
     color: gray;
 }
+
+
 
 
 
