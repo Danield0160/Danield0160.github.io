@@ -9,6 +9,7 @@ html{
 body{
     margin: 0;
     margin-bottom: -30px;
+    overflow-x: hidden;
     background-color: black;
 }
 
@@ -21,7 +22,7 @@ body{
 nav{
     display: flex;
     align-items: center;
-    width: 100vw;
+    width: 100%;
     margin-left: 0vw;
 
     position: sticky;
@@ -75,7 +76,7 @@ nav div > a{
 }
 #main::before{
     content: "";
-    background-image: url("./nebula.jpg");
+    background-image: url("/images/nebula.jpg");
     background-size: 100% 100%;
     filter: blur(30px);
     position: absolute;
@@ -159,7 +160,6 @@ nav div > a{
     padding: 5px;
     box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
     background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
-    margin-bottom: 50px;
 }
 
 .card__content {
@@ -222,24 +222,34 @@ nav div > a{
 
 
 
-#secundary{
+#secundary,#proyects{
 background: #091221;
-background: linear-gradient(90deg, rgba(9, 18, 33, 1) 0%, rgba(46, 46, 51, 1) 85%, rgba(34, 43, 48, 1) 100%);
+margin-top: -2px;
+background: linear-gradient(0deg, rgba(9, 18, 33, 1) 0%, rgb(36, 36, 49) 85%, rgb(37, 34, 48) 100%);
+}
+#proyects{
+background: #091221;
+background: linear-gradient(180deg, rgba(9, 18, 33, 1) 0%, rgb(36, 36, 49) 85%, rgb(40, 34, 48) 100%);
+
 }
 #cursos{
     display: flex;
     justify-content: space-around;
     background-color: #1f2431;
     width: 85%;
-    margin-left: auto ;
+    margin: auto ;
     border: 3px solid rgb(125, 125, 211);
     border-right: 0 ;
-    border-radius: 50px 0 0 50px;
+    border-left: 0 ;
+    border-radius: 50px ;
 
     position: relative;
     transition: 1s ease-in-out all;
     left: 100vw;
     top: 10px;
+    transform: translateY(-50%);
+    z-index: 20;
+    margin-bottom: -150px;
 }
 #cursos.scrolled{
     box-shadow: 2px 8px 2px  rgb(55, 55, 99);
@@ -264,6 +274,10 @@ background: linear-gradient(90deg, rgba(9, 18, 33, 1) 0%, rgba(46, 46, 51, 1) 85
     flex-direction: column;
     width: 80%;
 }
+#anchor_cursos{
+    position: relative;
+    top: -300px;
+}
 #cursos_info .titulo{
     text-align: center;
     background-color: rgb(66, 83, 128);
@@ -280,7 +294,7 @@ background: linear-gradient(90deg, rgba(9, 18, 33, 1) 0%, rgba(46, 46, 51, 1) 85
     transform: skewX(-25deg);
 }
 
-#cursos .container{
+#cursos .container_cursos{
     display: flex;
     list-style: none;
     margin: 15px;
@@ -288,11 +302,13 @@ background: linear-gradient(90deg, rgba(9, 18, 33, 1) 0%, rgba(46, 46, 51, 1) 85
     flex-wrap: wrap;
     flex-direction: row;
     gap: 20px;
+    padding: 30px;
 }
-#cursos .container div{
+#cursos .container_cursos div{
     text-align: center;
     width: min-content;
-    min-width: 25%;
+    min-width: 14vw;
+    min-height: 13vh;
     border: 1px solid grey;
     border-radius: 20px;
     overflow: hidden;
@@ -306,7 +322,7 @@ background: linear-gradient(90deg, rgba(9, 18, 33, 1) 0%, rgba(46, 46, 51, 1) 85
     height: 275px;
     padding-bottom: 10px;
 }
-#cursos .container div img{
+#cursos .container_cursos div img{
     width: 100%;
     border-radius: 10px;
     position: absolute;
@@ -338,7 +354,7 @@ background: linear-gradient(90deg, rgba(9, 18, 33, 1) 0%, rgba(46, 46, 51, 1) 85
     display: flex;
 }
 .skill-group h2{
-    font-size: x-large;
+    font-size: xx-large;
     text-align: center;
     margin: auto;
 }
@@ -403,24 +419,49 @@ background: linear-gradient(90deg, rgba(9, 18, 33, 1) 0%, rgba(46, 46, 51, 1) 85
     display: flex;
     flex-direction: column;
     gap: 25px;
+    padding-left: 75px;
+    padding-right: 75px;
+    padding-bottom: 150px;
 }
+
 #proyects h1{
     text-align: center;
-    font-size: xx-large;
     font-weight: bold;
+    background-color: rgb(20, 89, 155,1);
+    padding: 10px 125px;
+    transform: skew(-66deg);
 }
+#proyects h1 span{
+    transform: skew(47deg);
+    display: inline-block;
+    margin: auto;
+}
+.decorated_tittle{
+    background-color: rgb(20, 89, 155,1);
+    transform: skew(50deg);
+    margin: auto;
+    margin-top: 100px;
+}
+#first_dt{
+    max-width: 80vw;
+    width: 1000px;
+    font-size: 50px;
+}
+.other_dt{
+    font-size: xx-large;
+}
+
 #proyects .container{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    margin: auto;
+    margin-bottom: 75px;
 }
-#proyects h2{
-    font-size: x-large;
-    text-align: center;
-}
+
+
 #proyects .container .tarjeta{
-    margin-left: 75px;
-    margin-right: 75px;
+
     display: flex;
     flex-direction: column;
     width: 350px;
@@ -429,11 +470,12 @@ background: linear-gradient(90deg, rgba(9, 18, 33, 1) 0%, rgba(46, 46, 51, 1) 85
     border-radius: 10px;
     padding: 15px;
     transition: 0.5s ease-in-out all;
-    box-shadow: 5px 7px 3px rgb(135, 94, 182), -5px 7px 3px rgb(83,84,153,1), -5px -7px 3px rgb(20, 89, 155,1), 5px -7px 3px rgb(83,84,153,1);
+    box-shadow: 5px 7px 3px rgb(135, 94, 182), -5px 7px 3px rgb(83,84,153,1), -5px -7px 3px rgb(20, 89, 155,1), 5px -7px 3px rgb(83,84,153,1), 0px 0px 5px rgb(0, 0, 0);
 }
 #proyects .container .tarjeta:hover{
-    box-shadow: 5px 7px 3px rgb(20, 89, 155,1), -5px 7px 3px rgb(83,84,153,1), -5px -7px 3px rgb(135, 94, 182) , 5px -7px 3px rgb(83,84,153,1);
+    box-shadow: 5px 7px 3px rgb(20, 89, 155,1), -5px 7px 3px rgb(83,84,153,1), -5px -7px 3px rgb(135, 94, 182) , 5px -7px 3px rgb(83,84,153,1), 20px 27px 5px rgb(0, 0, 0);
     transition: 0.5s ease-in-out all;
+    scale: 1.05;
 }
 
 #proyects .container .tarjeta h3{
@@ -484,6 +526,41 @@ background: linear-gradient(90deg, rgba(9, 18, 33, 1) 0%, rgba(46, 46, 51, 1) 85
 
 
 
+.enlance_git{
+    background-color: white;
+    font-size: 50px;
+    width: fit-content;
+    padding: 3px;
+    border-radius: 20px;
+    margin: auto;
+    margin-bottom: 15px;
+    border: 2px solid black;
+    width: 50px;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: 0.3s ease-in-out all;
+    color: black !important;
+    text-decoration: none !important;
+}
+.enlance_git:hover{
+    box-shadow: 0px 0px 20px white,0px 0px 10px white;
+    cursor: pointer;
+    width: 175px;
+    transition: 0.3s ease-in-out all;
+
+}
+.enlance_git span{
+    font-size: xx-large;
+    position: relative;
+    top: -10px;
+    right: -10px;
+}
+
+
+
+
+
+
 #proyects .image_carousel{
     position: relative;
 }
@@ -495,6 +572,7 @@ background: linear-gradient(90deg, rgba(9, 18, 33, 1) 0%, rgba(46, 46, 51, 1) 85
     position: absolute;
     top: 0;
     z-index: 0;
+    padding: 0px;
 }
 
 #proyects .image_carousel > .selected {
@@ -526,4 +604,20 @@ background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 0) 1
 }
 #proyects .image_carousel .carousel_button_der{
     right: 0;
+}
+
+
+
+
+
+#proyects .tarjeta{
+    background: linear-gradient(132deg, #000000,#220072, #162a6b,#2a004d,#72033a,#2c1179);
+    background-size: 400% 400%;
+    animation: BackgroundGradient 50s ease infinite;
+    margin: 0;
+}
+@keyframes BackgroundGradient {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
 }

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./css/style.css">
 
     <title>Daniel R.M Dev</title>
 </head>
@@ -15,16 +15,16 @@
         <span id="nombre">Daniel Rosales Martín</span>
         <span id="menu">
             <div>
-                <a href="">Bio</a>
-                <a href="">Habilidades</a>
-                <a href="">Proyectos</a>
-                <a href="">Experiencia</a>
+                <a href="#main">Bio</a>
+                <a href="#anchor_cursos">Habilidades</a>
+                <a href="#proyects">Proyectos</a>
             </div>
         </span>
     </nav>
 
 
     <div id="main">
+        
         <div class="layer">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
                 <path fill="#535da1" fill-opacity="1"
@@ -61,9 +61,10 @@
 
                 <div class="card">
                     <div class="card__content">
-                        <img src="./IMG-20250525-WA0029.jpg" alt="">
+                        <img src="./images/photo.jpg" alt="">
                     </div>
                 </div>
+                <a href="https://github.com/Danield0160" class="devicon-github-plain colored enlance_git"><span>GitHub</span></a>
 
 
                 <ul class="titles">
@@ -74,31 +75,33 @@
                 </ul>
             </div>
         </div>
+        
     </div>
 
     <div id="secundary">
 
+        <a href=""  id="anchor_cursos"></a>
         <div id="cursos">
 
-            <!-- <img src="./studies.jpg" alt=""> -->
+            <!-- <img src="./images/studies.jpg" alt=""> -->
             <div id="cursos_info">
                 <div class="titulo">
                     <h2>Estudios con titulo oficial</h2>
                 </div>
 
-                <div class="container">
+                <div class="container_cursos">
                     <div>
-                        <img src="./ceib.jpg" alt="">
+                        <img src="./images/ceib.jpg" alt="">
                         <p>Curso de Especialización en <br>Inteligencia Artificial y Big Data <br> <span
                                 class="gris">2024-2025</span></p>
                     </div>
                     <div>
-                        <img src="./daw.jpg" alt="">
+                        <img src="./images/daw.jpg" alt="">
                         <p>Técnico Superior en <br>Desarrollo de Aplicaciones Web <br><span class="gris">
                                 2022-2024</span></p>
                     </div>
                     <div>
-                        <img src="./Ing.webp" alt="">
+                        <img src="./images/Ing.webp" alt="">
                         <p>Ingenieria <br>informatica <br><span class="gris"> En mi tiempo libre</span></p>
                     </div>
                 </div>
@@ -139,7 +142,7 @@
                     <h2>Herramientas que domino en menor medida</h2>
                 </div>
                 <ul class="skills">
-                    <li><i class="devicon-python-plain colored"></i><span>Vue</span></li>
+                    <li><i class="devicon-vuejs-plain colored"></i><span>Vuejs</span></li>
                     <li><i class="devicon-spring-plain colored"></i><span>Spring</span></li>
                     <li><i class="devicon-tensorflow-original colored"></i><span>TensorFlow</span></li>
                     <li><i class="devicon-docker-plain colored"></i><span>Docker</span></li>
@@ -152,7 +155,7 @@
                 </div>
                 <ul class="skills">
                     <li><i class="devicon-figma-plain colored"></i><span>Figma</span></li>
-                    <li><img src="./sap.png"></img><span>SAP Hybris</span></li>
+                    <li><img src="./images/sap.png"></img><span>SAP Hybris</span></li>
                     <li><i class="devicon-apache-plain colored"></i><span>Hadoop</span></li>
                 </ul>
             </section>
@@ -161,9 +164,14 @@
     </div>
 
     <div id="proyects">
-        <h1>Proyectos</h1>
+        <div class="decorated_tittle" id="first_dt">
+            <h1><span>Proyectos</span></h1>
+        </div>
 
-        <h2>Proyectos grandes</h2>
+        <div class="decorated_tittle other_dt">
+            <h1><span>Proyectos Grandes</span></h1>
+        </div>
+        <h2 class="decoration"></h2>
         <div class="container">
             <div class="tarjeta">
                 <h3>Queater</h3>
@@ -185,6 +193,7 @@
                     <video muted controls src="./proyectos/imigo/Sin Título Hb2.mp4" alt=""></video>
                 </div>
                 <p>Webapp prototipo funcional para hacer eventos presenciales, usando el estilo <em>SPA</em> y tecnologia <em>WPA</em> y su version movil</p>
+                <a href="https://github.com/Danield0160/i_migo_laravel" class="devicon-github-plain colored enlance_git"><span>GitHub</span></a>
                 <ul>
                     <li><i class="devicon-laravel-plain colored"></i><span>Laravel</span></li>
                     <li><i class="devicon-vuejs-plain colored"></i><span>Vue</span></li>
@@ -194,7 +203,9 @@
 
         </div>
 
-        <h2>Proyectos medianos</h2>
+        <div class="decorated_tittle other_dt">
+            <h1><span>Proyectos Medianos</span></h1>
+        </div>
         <div class="container">
             <div class="tarjeta">
                 <h3>Analisis y prediccion de genero musical</h3>
@@ -223,8 +234,8 @@
                 <ul>
                     <li><img  src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/webp/anything-llm-light.webp"></img><span>AnythingLLm</span></li>
                     <li><i class="devicon-python-plain colored"></i><span>Python</span></li>
-                    <li><img src="./ultraanalitycs.svg" alt=""><span>Yolo</span></li>
-                    <li><img src="./opencv.webp" alt=""><span>Opencv</span></li>
+                    <li><img src="./images/ultraanalitycs.svg" alt=""><span>Yolo</span></li>
+                    <li><img src="./images/opencv.webp" alt=""><span>Opencv</span></li>
                 </ul>
             </div>
             <div class="tarjeta">

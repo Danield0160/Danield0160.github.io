@@ -10,7 +10,7 @@ function detect_scroll() {
         nav.classList.add("scrolled")
     }
 
-    if(y>75){
+    if(y>250){
         cursos.classList.add("scrolled")
     }else{
         cursos.classList.remove("scrolled")
@@ -23,6 +23,7 @@ function detect_scroll() {
 
     // })
     
+    console.log(y)
 
 
 }
