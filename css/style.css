@@ -9,7 +9,6 @@ html{
 body{
     margin: 0;
     margin-bottom: -30px;
-    overflow-x: hidden;
     background-color: black;
 }
 
@@ -23,9 +22,10 @@ nav{
     display: flex;
     align-items: center;
     width: 100%;
+    padding: 20px;
     margin-left: 0vw;
 
-    position: sticky;
+    position: fixed;
     top: 0px;
     
     background: rgba(255, 255, 255, 0.32);
@@ -38,14 +38,29 @@ nav{
 nav span{
     display: inline-block;
 }
-nav span#nombre{
+nav #nombre{
     width: 30%;
     text-align: center;
 }
-nav span#menu{
+#menu {
+    width: 100%;
+}
+#menu > *{
     text-align: center;
     margin: auto;
-    width: 65%;
+    width: 85%;
+    justify-content: space-around;
+}
+@media (max-width: 720px){
+    nav #menu{
+        text-align: center;
+        margin: auto;
+        width: 100%;
+    }
+    nav #menu a{
+        margin: 10px;
+    }
+
 }
 nav div{
     margin: auto;
@@ -65,11 +80,13 @@ nav div > a{
 
 
 #main{
+    margin-top: -15px;
     padding: 0px;
+    padding-top: 65px;
     z-index: 20;
     height: 100vh;
     padding-left: 0;
-    display: flexbox;
+    display: flex;
     align-content: center;
     position: relative;
     overflow: hidden;
@@ -134,14 +151,12 @@ nav div > a{
 
 
 #profile{
-    margin-bottom: 130px;
+    margin: auto;
     display: flex;
     justify-content: space-around;
-    margin-right: 5vw;
-    margin-left: 5vw;
     font-size: x-large;
-
 }
+
 .colored{
     color: rgb(114, 114, 235);
 }
@@ -150,7 +165,8 @@ nav div > a{
     flex-direction: column;
     align-items: center;
     max-width: 60%;
-
+    height: fit-content;
+    align-self: center;
 }
 
 .card {
@@ -219,7 +235,22 @@ nav div > a{
     margin: 0;
     font-size: x-large;
 }
-
+@media (max-width: 720px){
+    #profile{
+        flex-direction: column;
+    }
+    #profile #profile_img{
+        max-width: 100%;
+    }
+    #profile #info{
+        width: 85vw;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    #profile #info p{
+        text-align: center ;
+    }
+}
 
 
 #secundary,#proyects{
@@ -281,8 +312,9 @@ background: linear-gradient(180deg, rgba(9, 18, 33, 1) 0%, rgb(36, 36, 49) 85%, 
 #cursos_info .titulo{
     text-align: center;
     background-color: rgb(66, 83, 128);
-    padding: 15px;
+    padding: 15px 20px;
     width: 30%;
+    min-width: 120px;
     margin: auto;
     transform: skewX(25deg);
     margin-top: 10px;
@@ -293,6 +325,7 @@ background: linear-gradient(180deg, rgba(9, 18, 33, 1) 0%, rgb(36, 36, 49) 85%, 
     margin: auto;
     transform: skewX(-25deg);
 }
+
 
 #cursos .container_cursos{
     display: flex;
@@ -439,8 +472,10 @@ background: linear-gradient(180deg, rgba(9, 18, 33, 1) 0%, rgb(36, 36, 49) 85%, 
 .decorated_tittle{
     background-color: rgb(20, 89, 155,1);
     transform: skew(50deg);
+    max-width: 100% !important;
     margin: auto;
     margin-top: 100px;
+    text-align: center;
 }
 #first_dt{
     max-width: 80vw;
@@ -451,12 +486,17 @@ background: linear-gradient(180deg, rgba(9, 18, 33, 1) 0%, rgb(36, 36, 49) 85%, 
     font-size: xx-large;
 }
 
+
+
+
 #proyects .container{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     margin: auto;
     margin-bottom: 75px;
+    flex-wrap: wrap;
+    row-gap: 50px;
 }
 
 
@@ -486,6 +526,22 @@ background: linear-gradient(180deg, rgba(9, 18, 33, 1) 0%, rgb(36, 36, 49) 85%, 
     margin-top: 260px;
     margin-bottom: 10px;
 }
+
+
+
+@media (max-width: 720px){
+    #cursos{
+        left: 0;
+        transform: translateY(0%);
+        margin-bottom: 15px;
+    }
+    #proyects h1{
+        padding: 10px 1px;
+        transform: skew(-66deg);
+    }
+}
+
+
 #proyects li img{
     height: 23px;
     display: inline-block;
