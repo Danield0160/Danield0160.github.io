@@ -156,7 +156,10 @@ nav div > a{
     justify-content: space-around;
     font-size: x-large;
 }
-
+#button-download{
+    color: rgb(144, 144, 228);
+    text-decoration: underline;
+}
 .colored{
     color: rgb(114, 114, 235);
 }
@@ -167,8 +170,8 @@ nav div > a{
     max-width: 60%;
     height: fit-content;
     align-self: center;
+    row-gap: 10px;
 }
-
 .card {
     width: 290px;
     height: 400px;
@@ -283,7 +286,7 @@ background: linear-gradient(180deg, rgba(9, 18, 33, 1) 0%, rgb(36, 36, 49) 85%, 
     margin-bottom: -150px;
 }
 #cursos.scrolled{
-    box-shadow: 2px 8px 2px  rgb(55, 55, 99);
+    box-shadow: 0px 8px 3px  rgb(55, 55, 99);
     left: 0;
     transition: 1.5s ease-in-out all;
 }
@@ -529,7 +532,7 @@ background: linear-gradient(180deg, rgba(9, 18, 33, 1) 0%, rgb(36, 36, 49) 85%, 
 
 
 
-@media (max-width: 720px){
+@media (max-width: 1300px){
     #cursos{
         left: 0;
         transform: translateY(0%);
