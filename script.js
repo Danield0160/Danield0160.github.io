@@ -17,12 +17,6 @@ function detect_scroll() {
     }
 
 
-    // let svgs = [...document.querySelectorAll("#main svg")]
-    // svgs.forEach((ele, indx, arr)=>{
-    //     ele.style.transform = `translateX(${((y/6)*(indx+1)) - 200}px)`
-
-    // })
-    
     console.log(y)
 
 
@@ -30,17 +24,6 @@ function detect_scroll() {
 window.addEventListener('scroll',detect_scroll,false);
 
 
-// let svgs = [...document.querySelectorAll("#main svg")]
-// let i = 0
-// let m = window.innerWidth 
-
-// setInterval(() => {
-//     i = i+1;
-//     svgs.forEach((ele, indx, arr)=>{
-//         ele.style.transform = `translateX(${((i/6)*(indx+1)) - 200}px)`
-//     })
-
-// }, 10);
 
 let scale = window.innerWidth
 let svgs = [...document.querySelectorAll("#main svg")]

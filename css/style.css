@@ -156,7 +156,7 @@ nav div > a{
     justify-content: space-around;
     font-size: x-large;
 }
-#button-download{
+a#button-download{
     color: rgb(144, 144, 228) !important;
     text-decoration: underline !important;
 }
