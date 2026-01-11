@@ -157,8 +157,8 @@ nav div > a{
     font-size: x-large;
 }
 #button-download{
-    color: rgb(144, 144, 228);
-    text-decoration: underline;
+    color: rgb(144, 144, 228) !important;
+    text-decoration: underline !important;
 }
 .colored{
     color: rgb(114, 114, 235);
