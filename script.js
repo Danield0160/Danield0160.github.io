@@ -50,11 +50,54 @@ svgs.forEach((ele,indx,arr)=>{
 
         i = i+1;
         let value = ((i/6)*((indx+1)*0.25)) - 200
-        ele.style.transform = `translateX(${value}px)`
+        ele.style.transform = `translateX(${value}px `
         if (value >= window.innerWidth/3){
-            i = window.innerWidth * -1;
+            i = window.innerWidth * -1.3;
         }
 
     }, 1);
 
+})
+
+
+
+
+const carousels = [...document.getElementsByClassName("image_carousel")]
+
+carousels.forEach(carousel => {
+
+    const slides = [...carousel.children]
+
+    if (slides.length <= 1) {
+        slides[0].classList.add("selected")
+        return
+    }
+
+    let index = 0
+    slides[index].classList.add("selected")
+
+    const btnIzq = document.createElement("button")
+    btnIzq.innerText = "<"
+    btnIzq.classList.add("carousel_button_izq")
+
+    btnIzq.onclick = () => {
+        if (index === 0) return
+        slides[index].classList.remove("selected")
+        index--
+        slides[index].classList.add("selected")
+    }
+
+    const btnDer = document.createElement("button")
+    btnDer.innerText = ">"
+    btnDer.classList.add("carousel_button_der")
+
+    btnDer.onclick = () => {
+        if (index === slides.length - 1) return
+        slides[index].classList.remove("selected")
+        index++
+        slides[index].classList.add("selected")
+    }
+
+    carousel.appendChild(btnIzq)
+    carousel.appendChild(btnDer)
 })
