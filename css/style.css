@@ -82,7 +82,7 @@ nav div > a{
 #main{
     margin-top: -15px;
     padding: 0px;
-    padding-top: 65px;
+    padding-top: 150px;
     z-index: 20;
     height: 100vh;
     padding-left: 0;
@@ -173,8 +173,8 @@ a#button-download{
     row-gap: 10px;
 }
 .card {
-    width: 290px;
-    height: 400px;
+    width: fit-content;
+    height: fit-content;
     border-radius: 20px;
     padding: 5px;
     box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
@@ -185,8 +185,14 @@ a#button-download{
     overflow: hidden;
     background: rgb(5, 6, 45);
     border-radius: 17px;
+    width: fit-content;
+    height: fit-content;
+}
+.card__content img{
     width: 100%;
-    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 9 / 16;
+    height: 50vh;
 }
 
 
